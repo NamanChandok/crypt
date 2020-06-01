@@ -6,11 +6,13 @@
     --secondary-color: #3259c2;
     --font-color: #000;
     --bg-color: #fff;
-    --heading-color: #a3a3a3;
+    --heading-color: #eee;
     --nav-bg-color: #ddd;
     --overlay-color: rgba(165, 165, 165, 0.32);
     --scroll-bg-color: #ddd;
     --scroll-fg-color: #aaa;
+    --moon: block;
+    --sun: none;
 }
 
 [data-theme="dark"] {
@@ -19,11 +21,13 @@
     --secondary-color: #3259c2;
     --font-color: #ffffff;
     --bg-color: #1f1f1f;
-    --heading-color: #1d1d1d;
+    --heading-color: #313131;
     --nav-bg-color: #2e2e2e;
     --overlay-color: rgba(0, 0, 0, 0.32);
     --scroll-bg-color: #0f0f0f;
     --scroll-fg-color: #272727;
+    --moon: none;
+    --sun: block;
 }
 
 /* PREREQUISITES */
@@ -114,7 +118,7 @@ hr {
 .navbar a:hover {
     box-shadow: ;
 }
-
+ 
 .navbar {
     overflow: hidden;
     background-color: none;
@@ -122,15 +126,9 @@ hr {
     width: 100%;
     border-radius: 0;
     z-index: 500;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
     padding-top: 1%;
-	-webkit-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-	-webkit-animation-name: InDown;
-    animation-name: InDown;
     top: 0;
     color: var(--primary-color);
 }
@@ -163,6 +161,15 @@ hr {
     background-color: var(--secondary-color);
     color: #fff;
     padding: 10 20;
+    float: right;
+}
+
+.navbar a.discord:hover {
+    background-color: var(--primary-color);
+}
+
+.navbar a.disord:hover {
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0,);
 }
 
 .theme-switch-wrapper {
@@ -181,9 +188,9 @@ hr {
 
 .theme-switch {
     display: inline-block;
-    height: 24px;
+    height: 50px;
     position: relative;
-    width: 34px;
+    width: 50px;
 }
 
 .theme-switch input {
@@ -198,32 +205,29 @@ hr {
     position: absolute;
     right: 0;
     top: 0;
-}
-
-.slider:before {
-    background-color: #fff;
-    bottom: 2px;
-    content: "";
-    height: 20px;
-    left: 2px;
-    position: absolute;
-    width: 20px;
-    transition: 0.4s;
+    font-size: 30;
+    text-align: center;
+    padding-top: 10;
+    box-shadow: 0 0.125em 0.313em rgba(50,50,93,.09), 0 0.063em 0.125em rgba(0,0,0,.07);
 }
 
 input:checked + .slider {
-    background-color: var(--primary-color);
+    background-color: var(--heading-color);
 }
 
-input:checked + .slider:before {
-    transform: translateX(10px);
+.sun {
+    display: var(--sun);
+}
+
+.moon {
+    display: var(--moon);
+}
+
+.slider img {
+    height: 30px;
 }
 
 .slider.round {
-    border-radius: 12px;
-}
-
-.slider.round:before {
     border-radius: 50%;
 }
 
