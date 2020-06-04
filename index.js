@@ -10,17 +10,7 @@
         document.getElementById("load").style.display = "none";
         document.getElementById("mainBod").style.display = "block";
     } 
-    
-    // TRANSPARENT NAVBAR
-    
-    jQuery(document).on("scroll", function () {
-        if ($(document).scrollTop() > 120) {
-            $(".navbar").css("background-color","var(--nav-bg-color)");
-        } else {
-            $(".navbar").css("background","none");
-        }
-    });  
-    
+
     // SMOOTH SCROLL
     
     $(document).ready(function(){
