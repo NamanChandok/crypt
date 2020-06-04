@@ -8,7 +8,7 @@
     --font-color: #000;
     --bg-color: #fff;
     --heading-color: #eee;
-    --nav-bg-color: #ddd;
+    --loader-bg-color: #ffffff;
     --overlay-color: rgba(80, 80, 80, 0.32);
     --scroll-bg-color: #ddd;
     --scroll-fg-color: #aaa;
@@ -25,7 +25,7 @@
     --font-color: #bbb;
     --bg-color: #1f1f1f;
     --heading-color: #313131;
-    --nav-bg-color: #2e2e2e;
+    --loader-bg-color: #1f1f1f;
     --overlay-color: rgba(0, 0, 0, 0.32);
     --scroll-bg-color: #0f0f0f;
     --scroll-fg-color: #272727;
@@ -74,7 +74,7 @@ hr {
 .load {
     height: 100%;
     width: 100%;
-    background-color: var(--nav-bg-color);
+    background-color: var(--loader-bg-color);
 }
     
 .loader {
@@ -264,24 +264,26 @@ input[type=text], input[type=password] {
     padding: 10;
     justify-content: center;
     align-content: center;
-    width: 50vw;
+    width: 100%;
     text-align: center;
     margin: 10px auto;
     background: none;
     color: var(--font-color);
+    transition: 0.4s;
 }
 
 input[type="submit"] {
     border: var(--primary-color) solid 2px;
     background: none;
     border-radius: 30px;
-    padding: 10 20;
+    padding: 10 30;
     justify-content: center;
     align-content: center;
     width: auto;
     text-align: center;
     margin: 5px auto;
     color: var(--font-color);
+    transition: 0.4s;
 }
 
 input[type="submit"]:hover{
@@ -292,13 +294,19 @@ input[type="submit"]:hover{
 input[type="text"]:focus-within, input[type="password"]:focus-within {
     border: transparent solid 2px;
     border-bottom-color: var(--primary-color);
-    width: 60vw;
+}
+
+.question-image {
+    width: 70%;
 }
 
     /* HOME PAGE */
 
 .writen {
     padding: 50;
+}
+
+.right {
     text-align: right;
     animation: inLeft 1s cubic-bezier(0, 0, .5, 1);
     animation-fill-mode: both;
@@ -307,6 +315,30 @@ input[type="text"]:focus-within, input[type="password"]:focus-within {
     -moz-animation: inLeft 1s cubic-bezier(0, 0, .5, 1);
     -moz-animation-fill-mode: both;
     -o-animation: inLeft 1s cubic-bezier(0, 0, .5, 1);
+    -o-animation-fill-mode: both;
+}
+
+.left {
+    text-align: left;
+    animation: inRight 1s cubic-bezier(0, 0, .5, 1);
+    animation-fill-mode: both;
+    -webkit-animation: inRight 1s cubic-bezier(0, 0, .5, 1);
+    -webkit-animation-fill-mode: both;
+    -moz-animation: inRight 1s cubic-bezier(0, 0, .5, 1);
+    -moz-animation-fill-mode: both;
+    -o-animation: inRight 1s cubic-bezier(0, 0, .5, 1);
+    -o-animation-fill-mode: both;
+}
+
+.center {
+    text-align: center;
+    animation: fadeIn 1s cubic-bezier(0, 0, .5, 1);
+    animation-fill-mode: both;
+    -webkit-animation: fadeIn 1s cubic-bezier(0, 0, .5, 1);
+    -webkit-animation-fill-mode: both;
+    -moz-animation: fadeIn 1s cubic-bezier(0, 0, .5, 1);
+    -moz-animation-fill-mode: both;
+    -o-animation: fadeIn 1s cubic-bezier(0, 0, .5, 1);
     -o-animation-fill-mode: both;
 }
 
@@ -451,5 +483,41 @@ input[type="text"]:focus-within, input[type="password"]:focus-within {
     }
     100% {
         transform: translateX(0%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
