@@ -1,4 +1,4 @@
-/* VARIABLES */
+    /* VARIABLES */
 
 :root {
     --primary-color: #457eff;
@@ -7,7 +7,7 @@
     --secondary-color: #3259c2;
     --font-color: #000;
     --bg-color: #fff;
-    --heading-color: #eee;
+    --heading-color: rgba(0, 0, 0, 0.05);
     --loader-bg-color: #ffffff;
     --overlay-color: rgba(80, 80, 80, 0.32);
     --scroll-bg-color: #ddd;
@@ -15,26 +15,28 @@
     --moon: block;
     --sun: none;
     --invert: invert(0%);
+    --dark-image: 1;
 }
 
 [data-theme="dark"] {
     --primary-color: #2798eb;
-    --primary-color-half: rgba(42, 165, 255, 0.5);
+    --primary-color-half: rgba(0, 78, 137, 0.5);
     --home-color: #457eff;
     --secondary-color: #3259c2;
     --font-color: #bbb;
-    --bg-color: #1f1f1f;
-    --heading-color: #313131;
-    --loader-bg-color: #1f1f1f;
+    --bg-color: #151515;
+    --heading-color: rgba(255, 255, 255, 0.01);
+    --loader-bg-color: #151515;
     --overlay-color: rgba(0, 0, 0, 0.32);
     --scroll-bg-color: #0f0f0f;
     --scroll-fg-color: #272727;
     --moon: none;
     --sun: block;
     --invert: invert(100%);
+    --dark-image: 0.8;
 }
 
-/* PREREQUISITES */
+    /* PREREQUISITES */
 
 * {
     margin: 0;
@@ -62,6 +64,7 @@ body {
     background-color: var(--bg-color);
     color: var(--font-color);
     transition: 0.4s;
+    height: 100%;
 }
 
 hr {
@@ -117,7 +120,7 @@ hr {
     overflow-x: hidden;
 } 
 
-/*NAVBAR*/
+    /*NAVBAR*/
  
 .navbar {
     overflow: hidden;
@@ -125,7 +128,7 @@ hr {
     width: 100%;
     border-radius: 0;
     z-index: 500;
-    padding: 1% 8%;
+    padding: 1% 0;
     color: var(--primary-color);
 }
 
@@ -181,6 +184,7 @@ a.button:hover {
     position: fixed;
     bottom: 20;
     right: 20;
+    z-index: 999;
 }
 
 .theme-switch-wrapper a {
@@ -298,9 +302,14 @@ input[type="text"]:focus-within, input[type="password"]:focus-within {
 
 .question-image {
     width: 70%;
+    opacity: var(--dark-image);
 }
 
     /* HOME PAGE */
+
+.home {
+    min-height: 60%;
+}
 
 .writen {
     padding: 50;
@@ -347,9 +356,11 @@ input[type="text"]:focus-within, input[type="password"]:focus-within {
     font-weight: 500;
 }
 
-.invert {
-    filter: var(--invert);
+.img-logo {
     max-width: 100%;
+    opacity: 0.9;
+    height: 65%;
+    transition: 0.4s;
     animation: inRight 1s cubic-bezier(0, 0, .5, 1);
     animation-fill-mode: both;
     -webkit-animation: inRight 1s cubic-bezier(0, 0, .5, 1);
@@ -360,8 +371,21 @@ input[type="text"]:focus-within, input[type="password"]:focus-within {
     -o-animation-fill-mode: both;
 }
 
+.invert {
+    filter: var(--invert);
+}
+
 .writen h1 {
     font-size: 50;
+    padding-bottom: 30;
+}
+
+.writen h2 {
+    font-size: 40;
+}
+
+.writen p {
+    font-size: 20;
     padding-bottom: 30;
 }
 
@@ -376,6 +400,46 @@ input[type="text"]:focus-within, input[type="password"]:focus-within {
     color: var(--font-color);
 }
 
+    /* LEADERBOARD */
+
+.leaderboard {
+    width: 100%;
+    margin: 20 0;
+}
+
+.rank, .name, .level {
+    padding: 10;
+    border: 1px solid var(--bg-color);
+}
+
+.rank {
+    width: 20%;
+}
+
+.name {
+    width: 60%;
+}
+
+.level {
+    width: 20%;
+}
+
+.lighter {
+    background-color: var(--heading-color);
+}
+
+    /* END */
+
+#end {
+    width: 100%;
+    padding: 30px;
+}
+    
+.font-alt {
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+}
     /* ANIMATIONS */
 
 @keyframes loading {
@@ -521,3 +585,17 @@ input[type="text"]:focus-within, input[type="password"]:focus-within {
         opacity: 1;
     }
 }
+
+
+
+
+/* ____     ____
+   |   \    |   \     |     |   |    |
+   | |\ \   | |\ \    |     |   |    |
+   | |/ /   | |/ /    |     |   |    |
+   |   /    |___/     |     |   |____|
+   |   \    |   \     |     |   |    |
+   | |\ \   |    \    |     |   |    |
+   | |/ /   |     \   |     |   |    |
+   |___/    |      \  \_____/   |    | */
+   
