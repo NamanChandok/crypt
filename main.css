@@ -396,9 +396,18 @@ input[type="text"]:focus-within, input[type="password"]:focus-within {
     transition: 0.4s;
 }
 
-.page-links:hover {
-    color: var(--font-color);
+.discord:hover  {
+    color: #738ADB;
 }
+
+.facebook:hover {
+    color: #4267B2;
+}
+
+.email:hover {
+    color: #B23121;
+}
+
 
     /* LEADERBOARD */
 
