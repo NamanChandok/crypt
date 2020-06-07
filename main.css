@@ -16,6 +16,7 @@
     --sun: none;
     --invert: invert(0%);
     --dark-image: 1;
+    --red-text: #ff2020;
 }
 
 [data-theme="dark"] {
@@ -34,6 +35,7 @@
     --sun: block;
     --invert: invert(100%);
     --dark-image: 0.8;
+    --red-text: #ff2a2a;
 }
 
     /* PREREQUISITES */
@@ -408,6 +410,10 @@ input[type="text"]:focus-within, input[type="password"]:focus-within {
     color: #B23121;
 }
 
+.red {
+    float: left;
+    color: var(--red-text);
+}
 
     /* LEADERBOARD */
 
