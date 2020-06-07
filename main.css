@@ -206,7 +206,6 @@ a.button:hover {
 }
 
 .slider {
-    background-color: #ccc;
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -216,9 +215,6 @@ a.button:hover {
     font-size: 30;
     text-align: center;
     padding-top: 10;
-}
-
-input:checked + .slider {
     background-color: var(--heading-color);
 }
 
