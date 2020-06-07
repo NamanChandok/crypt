@@ -302,7 +302,7 @@ input[type="submit"]:hover, button[type="signup"]:hover{
     color: #fff;
 }
 
-input[type="email"]:focus-within, input[type="password"]:focus-within {
+input[type="email"]:focus-within, input[type="password"]:focus-within, input[type="text"]:focus-within {
     border: transparent solid 2px;
     border-bottom-color: var(--primary-color);
 }
