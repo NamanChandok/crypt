@@ -17,6 +17,7 @@
     --invert: invert(0%);
     --dark-image: 1;
     --red-text: #ff2020;
+    --blue-text: #1c1cff;
 }
 
 [data-theme="dark"] {
@@ -36,6 +37,7 @@
     --invert: invert(100%);
     --dark-image: 0.8;
     --red-text: #ff2a2a;
+    --blue-text: #2a2aff;
 }
 
     /* PREREQUISITES */
@@ -167,6 +169,7 @@ a.button {
     position: relative;
     transition: 0.4s;
     box-shadow: 0 4px 8px 0 var(--overlay-color);
+    margin: 5;
 }
 
 .navbar a.button {
@@ -264,7 +267,7 @@ input:checked + .slider {
     margin-bottom: 30;
 }
 
-input[type=email], input[type=password] {
+input[type=email], input[type=password] , input[type=text]{
     border: transparent solid 2px;
     border-bottom-color: var(--secondary-color);
     padding: 10;
@@ -276,6 +279,10 @@ input[type=email], input[type=password] {
     background: none;
     color: var(--font-color);
     transition: 0.4s;
+}
+
+.home input {
+    text-align: right;
 }
 
 input[type="submit"], button[type="signup"] {
@@ -319,38 +326,14 @@ input[type="email"]:focus-within, input[type="password"]:focus-within {
 
 .right {
     text-align: right;
-    animation: inLeft 1s cubic-bezier(0, 0, .5, 1);
-    animation-fill-mode: both;
-    -webkit-animation: inLeft 1s cubic-bezier(0, 0, .5, 1);
-    -webkit-animation-fill-mode: both;
-    -moz-animation: inLeft 1s cubic-bezier(0, 0, .5, 1);
-    -moz-animation-fill-mode: both;
-    -o-animation: inLeft 1s cubic-bezier(0, 0, .5, 1);
-    -o-animation-fill-mode: both;
 }
 
 .left {
     text-align: left;
-    animation: inRight 1s cubic-bezier(0, 0, .5, 1);
-    animation-fill-mode: both;
-    -webkit-animation: inRight 1s cubic-bezier(0, 0, .5, 1);
-    -webkit-animation-fill-mode: both;
-    -moz-animation: inRight 1s cubic-bezier(0, 0, .5, 1);
-    -moz-animation-fill-mode: both;
-    -o-animation: inRight 1s cubic-bezier(0, 0, .5, 1);
-    -o-animation-fill-mode: both;
 }
 
 .center {
     text-align: center;
-    animation: fadeIn 1s cubic-bezier(0, 0, .5, 1);
-    animation-fill-mode: both;
-    -webkit-animation: fadeIn 1s cubic-bezier(0, 0, .5, 1);
-    -webkit-animation-fill-mode: both;
-    -moz-animation: fadeIn 1s cubic-bezier(0, 0, .5, 1);
-    -moz-animation-fill-mode: both;
-    -o-animation: fadeIn 1s cubic-bezier(0, 0, .5, 1);
-    -o-animation-fill-mode: both;
 }
 
 .writen p, .writen h1 {
@@ -363,6 +346,31 @@ input[type="email"]:focus-within, input[type="password"]:focus-within {
     opacity: 0.9;
     height: 65%;
     transition: 0.4s;
+}
+
+.fade {
+    animation: fadeIn 1s cubic-bezier(0, 0, .5, 1);
+    animation-fill-mode: both;
+    -webkit-animation: fadeIn 1s cubic-bezier(0, 0, .5, 1);
+    -webkit-animation-fill-mode: both;
+    -moz-animation: fadeIn 1s cubic-bezier(0, 0, .5, 1);
+    -moz-animation-fill-mode: both;
+    -o-animation: fadeIn 1s cubic-bezier(0, 0, .5, 1);
+    -o-animation-fill-mode: both;
+}
+
+.slide-right {
+    animation: inLeft 1s cubic-bezier(0, 0, .5, 1);
+    animation-fill-mode: both;
+    -webkit-animation: inLeft 1s cubic-bezier(0, 0, .5, 1);
+    -webkit-animation-fill-mode: both;
+    -moz-animation: inLeft 1s cubic-bezier(0, 0, .5, 1);
+    -moz-animation-fill-mode: both;
+    -o-animation: inLeft 1s cubic-bezier(0, 0, .5, 1);
+    -o-animation-fill-mode: both;
+}
+
+.slide-left {
     animation: inRight 1s cubic-bezier(0, 0, .5, 1);
     animation-fill-mode: both;
     -webkit-animation: inRight 1s cubic-bezier(0, 0, .5, 1);
@@ -384,37 +392,13 @@ input[type="email"]:focus-within, input[type="password"]:focus-within {
 
 .writen h2 {
     font-size: 40;
+    padding-right: 20;
 }
 
 .writen p {
-    font-size: 20;
+    font-size: 17;
     padding-bottom: 30;
 }
-
-.page-links {
-    color: rgb(127, 127, 127);
-    font-size: 25px;
-    padding: 5;
-    transition: 0.4s;
-}
-
-.discord:hover  {
-    color: #738ADB;
-}
-
-.facebook:hover {
-    color: #4267B2;
-}
-
-.email:hover {
-    color: #B23121;
-}
-
-.red {
-    float: left;
-    color: var(--red-text);
-}
-
     /* LEADERBOARD */
 
 .leaderboard {
@@ -447,14 +431,64 @@ input[type="email"]:focus-within, input[type="password"]:focus-within {
 
 #end {
     width: 100%;
-    padding: 30px;
+    padding: 20px;
 }
     
 .font-alt {
     font-family: 'Dosis', sans-serif;
     text-transform: uppercase;
     font-size: 12px;
+    padding: 5 0;
 }
+
+#end .font-alt a {
+    padding: 0 2%;
+    text-decoration: none;
+    transition: 0.4s;
+    color: rgb(127, 127, 127);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#end .font-alt a:hover {
+    color: var(--font-color);
+}
+
+.page-links {
+    color: rgb(127, 127, 127);
+    font-size: 25px;
+    padding: 5;
+    transition: 0.4s;
+}
+
+.discord:hover  {
+    color: #738ADB;
+}
+
+.facebook:hover {
+    color: #4267B2;
+}
+
+.email:hover {
+    color: #B23121;
+}
+
+.red {
+    float: left;
+    color: var(--red-text);
+    display: none;
+}
+
+.blue {
+    color: var(--blue-text);
+    transition: 0.4s;
+}
+
+.blue:hover {
+    color: blue;
+}
+
+
     /* ANIMATIONS */
 
 @keyframes loading {
