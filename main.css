@@ -264,7 +264,7 @@ input:checked + .slider {
     margin-bottom: 30;
 }
 
-input[type=text], input[type=password] {
+input[type=email], input[type=password] {
     border: transparent solid 2px;
     border-bottom-color: var(--secondary-color);
     padding: 10;
@@ -278,7 +278,7 @@ input[type=text], input[type=password] {
     transition: 0.4s;
 }
 
-input[type="submit"] {
+input[type="submit"], button[type="signup"] {
     border: var(--primary-color) solid 2px;
     background: none;
     border-radius: 30px;
@@ -292,12 +292,12 @@ input[type="submit"] {
     transition: 0.4s;
 }
 
-input[type="submit"]:hover{
+input[type="submit"]:hover, button[type="signup"]:hover{
     background: var(--primary-color);
     color: #fff;
 }
 
-input[type="text"]:focus-within, input[type="password"]:focus-within {
+input[type="email"]:focus-within, input[type="password"]:focus-within {
     border: transparent solid 2px;
     border-bottom-color: var(--primary-color);
 }
