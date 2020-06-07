@@ -17,7 +17,6 @@
     --invert: invert(0%);
     --dark-image: 1;
     --red-text: #ff2020;
-    --blue-text: #1c1cff;
 }
 
 [data-theme="dark"] {
@@ -37,7 +36,6 @@
     --invert: invert(100%);
     --dark-image: 0.8;
     --red-text: #ff2a2a;
-    --blue-text: #2a2aff;
 }
 
     /* PREREQUISITES */
@@ -480,12 +478,12 @@ input[type="email"]:focus-within, input[type="password"]:focus-within {
 }
 
 .blue {
-    color: var(--blue-text);
+    color: var(--secondary-color);
     transition: 0.4s;
 }
 
 .blue:hover {
-    color: blue;
+    color: var(--primary-color);
 }
 
 
