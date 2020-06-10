@@ -263,7 +263,7 @@ a.button:hover {
     margin-bottom: 30;
 }
 
-input[type=email], input[type=password] , input[type=text]{
+input[type=email], input[type=password] , input[type=text], select, option {
     border: transparent solid 2px;
     border-bottom-color: var(--secondary-color);
     padding: 10;
@@ -300,9 +300,14 @@ input[type="submit"]:hover, button[type="signup"]:hover{
     color: #fff;
 }
 
-input[type="email"]:focus-within, input[type="password"]:focus-within, input[type="text"]:focus-within {
+input[type="email"]:focus-within, input[type="password"]:focus-within, input[type="text"]:focus-within, select:focus-within {
     border: transparent solid 2px;
     border-bottom-color: var(--primary-color);
+}
+
+option {
+    transition: 0.4s;
+    background-color: var(--bg-color);
 }
 
 .question-image {
@@ -476,12 +481,13 @@ input[type="email"]:focus-within, input[type="password"]:focus-within, input[typ
 }
 
 .blue {
-    color: var(--secondary-color);
+    color: var(--home-color);
     transition: 0.4s;
 }
 
 .blue:hover {
     color: var(--primary-color);
+    text-decoration: none;
 }
 
     /* ANIMATIONS */
