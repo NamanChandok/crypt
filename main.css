@@ -264,8 +264,9 @@ a.button:hover {
 }
 
 input[type=email], input[type=password] , input[type=text], select, option {
-    border: transparent solid 2px;
-    border-bottom-color: var(--secondary-color);
+    border: transparent solid 2px !important;
+    outline: none !important;
+    border-bottom-color: var(--secondary-color) !important;
     padding: 10;
     justify-content: center;
     align-content: center;
@@ -302,7 +303,7 @@ input[type="submit"]:hover, button[type="signup"]:hover{
 
 input[type="email"]:focus-within, input[type="password"]:focus-within, input[type="text"]:focus-within, select:focus-within {
     border: transparent solid 2px;
-    border-bottom-color: var(--primary-color);
+    border-bottom-color: var(--primary-color) !important;
 }
 
 option {
